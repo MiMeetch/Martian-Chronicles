@@ -6,7 +6,6 @@
 
 .center-button {
     display: flex;
-    position: sticky;
     justify-content: center;
     align-items: center;
     height: 100vh;

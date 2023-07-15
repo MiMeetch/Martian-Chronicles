@@ -3,3 +3,16 @@
     background-position: center;
     height: 100vh;
 }
+
+.center-button {
+    display: flex;
+    position: sticky;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .big-button {
+    font-size: 2rem;
+    padding: 1rem 2rem;
+  }

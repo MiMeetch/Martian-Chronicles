@@ -55,3 +55,19 @@ body {
   z-index: 100;
   font-size: large;
 }
+
+#left {
+  background-color: lightcoral;
+  width: 50%;
+  height: 100vh;
+}
+
+#right {
+  background-color: lightblue;
+  width: 50%;
+  height: 100vh;
+}
+
+#back {
+  display: flex;
+}

@@ -38,3 +38,16 @@ body {
   z-index: 100;
   font-size: xx-large;
 }
+
+#APOD-Explanation {
+  font-family: monospace;
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 50px;
+  left: 5%;
+  right: 5%;
+  margin-top: 5vh;
+  z-index: 100;
+  font-size: large;
+}

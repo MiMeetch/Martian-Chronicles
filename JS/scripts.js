@@ -35,6 +35,6 @@ window.addEventListener('DOMContentLoaded', function() {
                 clearInterval(intervalId2);
                 return;
             }
-        }, 100);
+        }, 50);
     })
 })

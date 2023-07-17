@@ -37,6 +37,10 @@ body {
   text-align: center;
   z-index: 100;
   font-size: xx-large;
+  border: 1px solid white;
+  border-radius: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 #APOD-Explanation {
@@ -44,7 +48,7 @@ body {
   color: white;
   position: absolute;
   text-align: center;
-  top: 50px;
+  top: 70px;
   left: 5%;
   right: 5%;
   margin-top: 5vh;

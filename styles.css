@@ -13,14 +13,26 @@ body {
 }
 
 .center-button {
-    display: flex;
-    position: sticky;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  position: sticky;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   }
 
-  .big-button {
-    font-size: 2rem;
-    padding: 1rem 2rem;
+.big-button {
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  font-family: monospace;
   }
+
+#APOD-Title {
+  font-family: monospace;
+  color: white;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-top: 5vh;
+}

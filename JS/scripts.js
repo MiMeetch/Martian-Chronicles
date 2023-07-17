@@ -3,10 +3,10 @@ window.addEventListener('DOMContentLoaded', function() {
     .then((resp) => resp.json())
     .then(function(data) {
 
-        console.log(data)
+        console.log(data);
 
         const backgroundElement = document.getElementById('background');
-        const backgroundTitle = document.getElementById('APOD-Title')
+        const backgroundTitle = document.getElementById('APOD-Title');
 
         const backgroundImageUrl = data.hdurl;
         const backgroundImageTitle = data.title;
@@ -19,9 +19,9 @@ window.addEventListener('DOMContentLoaded', function() {
             backgroundTitle.innerHTML += backgroundImageTitle[i]
             i++;
             if(i===backgroundImageTitle.length) {
-                clearInterval(intervalId)
+                clearInterval(intervalId);
                 return;
             }
-        }, 100)
+        }, 100);
     })
 })

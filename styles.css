@@ -12,6 +12,16 @@ body {
   max-width: 100vw;
 }
 
+.background-main {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 100vw;
+  background-color: lightsalmon;
+  display: flex;
+}
+
 .center-button {
   display: flex;
   position: sticky;
@@ -56,18 +66,12 @@ body {
   font-size: large;
 }
 
-#left {
-  background-color: lightcoral;
+#leftPanel {
   width: 50%;
   height: 100vh;
 }
 
-#right {
-  background-color: lightblue;
+#rightPanel {
   width: 50%;
   height: 100vh;
-}
-
-#back {
-  display: flex;
 }

@@ -148,6 +148,7 @@ body {
   height: 50px;
   transform: translate(-50%, -50%);
   visibility: hidden;
+  width: max-content
 }
 
 #rover2Button{
@@ -158,4 +159,5 @@ body {
   height: 50px;
   transform: translate(-50%, -50%);
   visibility: hidden;
+  width: max-content
 }

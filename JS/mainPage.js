@@ -70,6 +70,8 @@ Exit.addEventListener('click', function(){
     Rover2.style.top = "75%"
     Rover2.style.left = "62.5%"
 
+    Rover1Button.style.left = "75%"
+
     Title.style.left = "50%"
 
     leftButton.style.visibility = "visible"

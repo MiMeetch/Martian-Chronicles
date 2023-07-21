@@ -38,7 +38,7 @@ leftButton.addEventListener('click', function(){
     rightButton.style.visibility = "hidden"
     Exit.style.visibility = "visible"
 
-    Starman.style.top = "80%"
+    Starman.style.top = "100%"
     Starman.style.left = "0%"
 
 })
@@ -73,18 +73,18 @@ Exit.addEventListener('click', function(){
     Rover1Button.style.transition = "all 0s ease-out"
     Rover2Button.style.transition = "all 0s ease-out"
 
-    Roadster.style.top = "75%"
-    Roadster.style.left = "26.5%"
+    Roadster.style.top = ""
+    Roadster.style.left = ""
 
-    Rover1.style.top = "75%"
-    Rover1.style.left = "87.5%"
+    Rover1.style.top = ""
+    Rover1.style.left = ""
 
-    Rover2.style.top = "75%"
-    Rover2.style.left = "62.5%"
+    Rover2.style.top = ""
+    Rover2.style.left = ""
 
-    Rover1Button.style.left = "75%"
+    Rover1Button.style.left = ""
 
-    Title.style.left = "50%"
+    Title.style.left = ""
 
     Starman.style.top = ""
     Starman.style.left = ""

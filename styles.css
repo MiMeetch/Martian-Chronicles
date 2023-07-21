@@ -165,8 +165,9 @@ body {
 
 #Starman {
   position: fixed;
-  top: 110%;
-  left: -10%;
+  top: 130%;
+  left: -30%;
+  transform: translate(0%, -100%);
   background-image: url(images/fullsuitenew-0.png);
   width: 147px;
   height: 161px;

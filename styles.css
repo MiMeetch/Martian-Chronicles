@@ -104,15 +104,15 @@ body {
   filter: drop-shadow(16px 16px 16px black);
 }
 
-#Insight {
+#Roadster {
   position: fixed;
   top: 75%;
   left: 26.5%;
   transform: translate(-50%, -50%);
   /* background-color: lightgreen; */
-  width: 500px;
-  height: 232px;
-  background-image: url(Images/Daco_124880.png);
+  width: 535px;
+  height: 200px;
+  background-image: url(Images/PngItem_1250144.png);
   filter: drop-shadow(16px 16px 16px black);
 }
 
@@ -160,4 +160,39 @@ body {
   transform: translate(-50%, -50%);
   visibility: hidden;
   width: max-content
+}
+
+#Starman {
+  position: fixed;
+  top: 110%;
+  left: -10%;
+  background-image: url(images/fullsuitenew-0.png);
+  width: 147px;
+  height: 161px;
+}
+
+#ImageCarousel {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 80vw;
+  height: 80vh;
+  background-color: lightslategray;
+  display: flex;
+  align-items: center;
+}
+
+#navigation-buttons {
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+}
+
+#mars-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  height: 80vh;
 }

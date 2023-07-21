@@ -1,23 +1,30 @@
 const rightButton = document.getElementById('rightButton')
 const leftButton = document.getElementById('leftButton')
-const Insight = document.getElementById('Insight')
+const Roadster = document.getElementById('Roadster')
 const Rover1 = document.getElementById('Rover1')
 const Rover2 = document.getElementById('Rover2')
 const Title = document.getElementById('Title')
 const Exit = document.getElementById('Exit')
 const Rover1Button = document.getElementById('rover1Button')
 const Rover2Button = document.getElementById('rover2Button')
+const Starman = document.getElementById('Starman')
+const backButton = document.getElementById('back-button')
+const nextButton = document.getElementById('next-button')
 
-Insight.style.transition = "all 1s ease-out"
+let images = []
+let current = 0
+
+Roadster.style.transition = "all 1s ease-out"
 Rover1.style.transition = "all 1s ease-out"
 Rover2.style.transition = "all 1s ease-out"
 Title.style.transition = "all 1s ease-out"
+Starman.style.transition = "all 3s ease-out"
 
-//Weather Button Press
+//Roadster Button Press
 leftButton.addEventListener('click', function(){
 
-    Insight.style.left = "50%"
-    Insight.style.top = "80%"
+    Roadster.style.left = "50%"
+    Roadster.style.top = "80%"
 
     Rover1.style.left = "150%"
 
@@ -29,6 +36,9 @@ leftButton.addEventListener('click', function(){
     rightButton.style.visibility = "hidden"
     Exit.style.visibility = "visible"
 
+    Starman.style.top = "80%"
+    Starman.style.left = "0%"
+
 })
 
 //Surface Button Press
@@ -36,7 +46,7 @@ rightButton.addEventListener('click', function(){
     Rover1Button.style.transition = "all 1s ease-out"
     Rover2Button.style.transition = "all 1s ease-out"
 
-    Insight.style.left = "-50%"
+    Roadster.style.left = "-50%"
 
     Rover1.style.left = "75%"
 
@@ -61,8 +71,8 @@ Exit.addEventListener('click', function(){
     Rover1Button.style.transition = "all 0s ease-out"
     Rover2Button.style.transition = "all 0s ease-out"
 
-    Insight.style.top = "75%"
-    Insight.style.left = "26.5%"
+    Roadster.style.top = "75%"
+    Roadster.style.left = "26.5%"
 
     Rover1.style.top = "75%"
     Rover1.style.left = "87.5%"
@@ -74,9 +84,17 @@ Exit.addEventListener('click', function(){
 
     Title.style.left = "50%"
 
+    Starman.style.top = ""
+    Starman.style.left = ""
+
     leftButton.style.visibility = "visible"
     rightButton.style.visibility = "visible"
     Exit.style.visibility = "hidden"
     Rover1Button.style.visibility = "hidden"
     Rover2Button.style.visibility = "hidden"
+})
+
+//Curiosity Button Press
+Rover1Button.addEventListener('click', function() {
+
 })

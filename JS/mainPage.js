@@ -107,9 +107,12 @@ Rover1Button.addEventListener('click', function() {
     fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY')
         .then(res => res.json())
         .then(data => {
-            console.log(data)
-            console.log(data.photos)
-            console.log(data.photos[100].img_src)
+            for(i = 0; i < 856; i++) {
+                // console.log(data.photos[i].img_src)
+                images.push(data.photos[i].img_src)
+            }
+            console.log("done")
+            console.log(images[4])
         })
 
 })

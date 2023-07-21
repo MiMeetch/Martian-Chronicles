@@ -32,7 +32,7 @@ leftButton.addEventListener('click', function(){
 
     Rover2.style.left = "150%"
 
-    Title.style.left = "150%"
+    Title.style.left = "250%"
 
     leftButton.style.visibility = "hidden"
     rightButton.style.visibility = "hidden"
@@ -54,7 +54,7 @@ rightButton.addEventListener('click', function(){
 
     Rover2.style.left = "25%"
 
-    Title.style.left = "-50%"
+    Title.style.left = "-150%"
 
     Rover1Button.style.left = "25%"
     Rover1Button.style.visibility = "visible"
@@ -96,6 +96,12 @@ Exit.addEventListener('click', function(){
     Rover2Button.style.visibility = "hidden"
     ImageCarousel.style.visibility = "hidden"
     marsImage.style.visibility = "hidden"
+    Rover1.style.visibility = "visible"
+    Rover2.style.visibility = "visible"
+
+    images = [];
+    current = 0;
+    marsImage.src = images[current]
 })
 
 //Curiosity Button Press
@@ -103,16 +109,53 @@ Rover1Button.addEventListener('click', function() {
     Exit.style.visibility = "visible"
     ImageCarousel.style.visibility = "visible"
     marsImage.style.visibility = "visible"
-
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY')
+    Rover1.style.visibility = "hidden"
+    Rover2.style.visibility = "hidden"
+    Rover1Button.style.visibility = "hidden"
+    Rover2Button.style.visibility = "hidden"
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
         .then(res => res.json())
         .then(data => {
-            for(i = 0; i < 856; i++) {
-                // console.log(data.photos[i].img_src)
-                images.push(data.photos[i].img_src)
+            console.log(data)
+            for(i = 0; i < data.photos.length; i++) {
+                images.push(data.photos[i].img_src);
             }
-            console.log("done")
-            console.log(images[4])
+            marsImage.src = images[current]
         })
+})
 
+//Spirit Button Press
+Rover2Button.addEventListener('click', function() {
+    Exit.style.visibility = "visible"
+    ImageCarousel.style.visibility = "visible"
+    marsImage.style.visibility = "visible"
+    Rover1.style.visibility = "hidden"
+    Rover2.style.visibility = "hidden"
+    Rover1Button.style.visibility = "hidden"
+    Rover2Button.style.visibility = "hidden"
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=10&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            for(i = 0; i < data.photos.length; i++) {
+                images.push(data.photos[i].img_src);
+            }
+            marsImage.src = images[current]
+        })
+})
+
+backButton.addEventListener("click", (e) => {
+    if (current > 0) {
+        current--
+        marsImage.src = images[current]
+        console.log(current)
+        console.log
+    }
+})
+
+nextButton.addEventListener("click", (e) => {
+    if (current < images.length - 1) {
+        current++
+        marsImage.src = images[current]
+    }
 })

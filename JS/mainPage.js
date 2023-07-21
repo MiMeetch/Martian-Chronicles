@@ -10,6 +10,8 @@ const Rover2Button = document.getElementById('rover2Button')
 const Starman = document.getElementById('Starman')
 const backButton = document.getElementById('back-button')
 const nextButton = document.getElementById('next-button')
+const ImageCarousel = document.getElementById('ImageCarousel')
+const marsImage = document.getElementById('mars-image')
 
 let images = []
 let current = 0
@@ -92,9 +94,22 @@ Exit.addEventListener('click', function(){
     Exit.style.visibility = "hidden"
     Rover1Button.style.visibility = "hidden"
     Rover2Button.style.visibility = "hidden"
+    ImageCarousel.style.visibility = "hidden"
+    marsImage.style.visibility = "hidden"
 })
 
 //Curiosity Button Press
 Rover1Button.addEventListener('click', function() {
+    Exit.style.visibility = "visible"
+    ImageCarousel.style.visibility = "visible"
+    marsImage.style.visibility = "visible"
+
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY')
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            console.log(data.photos)
+            console.log(data.photos[100].img_src)
+        })
 
 })

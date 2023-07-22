@@ -122,6 +122,7 @@ Exit.addEventListener('click', function(){
     current = 0;
     marsImage.src = ""
     audio.currentTime = 52;
+    audio.pause();
 })
 
 //Curiosity Button Press

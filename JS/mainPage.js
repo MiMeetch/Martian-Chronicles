@@ -57,12 +57,12 @@ leftButton.addEventListener('click', function(){
 })
 
 Starman.addEventListener('click', function() {
-    DiscoBall.style.top = "30%"
+    DiscoBall.style.top = "0%"
     if (audio.paused) {
         audio.play()
     } else {
         audio.pause()
-        DiscoBall.style.top = "-100%"
+        DiscoBall.style.top = "-50%"
     }
 })
 

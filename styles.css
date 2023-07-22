@@ -186,6 +186,7 @@ body {
   background-image: url(images/fullsuitenew-0.png);
   width: 147px;
   height: 161px;
+  cursor: pointer;
 }
 
 #ImageCarousel {

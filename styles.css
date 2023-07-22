@@ -190,7 +190,7 @@ body {
 
 #ImageCarousel {
   position: fixed;
-  top: 50%;
+  top: -100%;
   left: 50%;
   transform: translate(-50%,-50%);
   width: 80vw;
@@ -213,12 +213,17 @@ body {
 
 #mars-image {
   position: fixed;
-  top: 50%;
+  top: -100%;
   left: 50%;
   transform: translate(-50%,-50%);
-  height: 80vh;
+  max-height: 80vh;
   max-width: 70vw;
   visibility: hidden;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  z-index: 100;
 }
 
 .navbutton {

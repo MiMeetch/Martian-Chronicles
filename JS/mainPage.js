@@ -20,6 +20,8 @@ Roadster.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-
 Rover1.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
 Rover2.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
 Title.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
+ImageCarousel.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
+marsImage.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
 Starman.style.transition = "all 3s ease-out"
 
 //Roadster Button Press
@@ -45,8 +47,8 @@ leftButton.addEventListener('click', function(){
 
 //Surface Button Press
 rightButton.addEventListener('click', function(){
-    Rover1Button.style.transition = "all 1s ease-out"
-    Rover2Button.style.transition = "all 1s ease-out"
+    Rover1Button.style.transition = "all 1s ease-out, visibility 0s ease-out"
+    Rover2Button.style.transition = "all 1s ease-out, visibility 0s ease-out"
 
     Roadster.style.left = "-50%"
 
@@ -89,6 +91,9 @@ Exit.addEventListener('click', function(){
     Starman.style.top = ""
     Starman.style.left = ""
 
+    marsImage.style.top = ""
+    ImageCarousel.style.top = ""
+
     leftButton.style.visibility = "visible"
     rightButton.style.visibility = "visible"
     Exit.style.visibility = "hidden"
@@ -109,6 +114,8 @@ Rover1Button.addEventListener('click', function() {
     Exit.style.visibility = "visible"
     ImageCarousel.style.visibility = "visible"
     marsImage.style.visibility = "visible"
+    ImageCarousel.style.top = "50%"
+    marsImage.style.top = "50%"
     Rover1.style.visibility = "hidden"
     Rover2.style.visibility = "hidden"
     Rover1Button.style.visibility = "hidden"
@@ -120,8 +127,8 @@ Rover1Button.addEventListener('click', function() {
             for(i = 0; i < data.photos.length; i++) {
                 images.push(data.photos[i].img_src);
             }
-            marsImage.src = images[current]
         })
+    marsImage.style.backgroundImage = `url(${images[current]})`
 })
 
 //Spirit Button Press
@@ -129,6 +136,8 @@ Rover2Button.addEventListener('click', function() {
     Exit.style.visibility = "visible"
     ImageCarousel.style.visibility = "visible"
     marsImage.style.visibility = "visible"
+    ImageCarousel.style.top = "50%"
+    marsImage.style.top = "50%"
     Rover1.style.visibility = "hidden"
     Rover2.style.visibility = "hidden"
     Rover1Button.style.visibility = "hidden"
@@ -140,16 +149,14 @@ Rover2Button.addEventListener('click', function() {
             for(i = 0; i < data.photos.length; i++) {
                 images.push(data.photos[i].img_src);
             }
-            marsImage.src = images[current]
         })
+    marsImage.style.backgroundImage = `url(${images[current]})`
 })
 
 backButton.addEventListener("click", (e) => {
     if (current > 0) {
         current--
         marsImage.src = images[current]
-        console.log(current)
-        console.log
     }
 })
 

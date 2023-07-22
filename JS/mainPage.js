@@ -14,7 +14,7 @@ const ImageCarousel = document.getElementById('ImageCarousel')
 const marsImage = document.getElementById('mars-image')
 const roadsterData = document.getElementById('roadster-data')
 
-let audio = new Audio("../Sounds/Starman.mp3");
+// let audio = new Audio("../Sounds/Starman.mp3");
 audio.currentTime = 52;
 
 let images = []

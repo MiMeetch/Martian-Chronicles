@@ -106,7 +106,7 @@ Exit.addEventListener('click', function(){
 
     images = [];
     current = 0;
-    marsImage.src = images[current]
+    marsImage.src = ""
 })
 
 //Curiosity Button Press
@@ -127,8 +127,8 @@ Rover1Button.addEventListener('click', function() {
             for(i = 0; i < data.photos.length; i++) {
                 images.push(data.photos[i].img_src);
             }
+        marsImage.src = images[current]
         })
-    marsImage.style.backgroundImage = `url(${images[current]})`
 })
 
 //Spirit Button Press
@@ -149,8 +149,8 @@ Rover2Button.addEventListener('click', function() {
             for(i = 0; i < data.photos.length; i++) {
                 images.push(data.photos[i].img_src);
             }
+        marsImage.src = images[current]
         })
-    marsImage.style.backgroundImage = `url(${images[current]})`
 })
 
 backButton.addEventListener("click", (e) => {

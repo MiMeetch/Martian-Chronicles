@@ -52,6 +52,20 @@ leftButton.addEventListener('click', function(){
 
     roadsterData.style.top = "35%"
 
+    fetch("https://api.spacexdata.com/v4/roadster") 
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        // const container = document.getElementById('grid-container')
+        // let gridHTML = '<div class="grid">'
+        // gridHTML += <div class="grid-item" id="key-col">
+        //     <ul>
+        //         <li></li>
+        //     </ul>
+        // </div>
+        console.log(data.name)
+    })
+
 })
 
 Starman.addEventListener('click', function() {
@@ -190,8 +204,4 @@ nextButton.addEventListener("click", (e) => {
 })
 
 
-fetch("https://api.spacexdata.com/v4/roadster") 
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-    })
+

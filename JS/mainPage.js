@@ -13,9 +13,10 @@ const nextButton = document.getElementById('next-button')
 const ImageCarousel = document.getElementById('ImageCarousel')
 const marsImage = document.getElementById('mars-image')
 const roadsterData = document.getElementById('roadster-data')
+const DiscoBall = document.getElementById('DiscoBall')
 
 let audio = new Audio("../Sounds/Starman.mp3");
-audio.currentTime = 52;
+audio.currentTime = 54;
 
 let images = []
 let current = 0
@@ -28,6 +29,7 @@ ImageCarousel.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s 
 marsImage.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
 Starman.style.transition = "all 5s ease-out"
 roadsterData.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out";
+DiscoBall.style.transition = "all 2s ease-out"
 
 
 //Roadster Button Press
@@ -55,10 +57,12 @@ leftButton.addEventListener('click', function(){
 })
 
 Starman.addEventListener('click', function() {
+    DiscoBall.style.top = "30%"
     if (audio.paused) {
         audio.play()
     } else {
         audio.pause()
+        DiscoBall.style.top = "-100%"
     }
 })
 
@@ -113,6 +117,8 @@ Exit.addEventListener('click', function(){
 
     roadsterData.style.top = ""
 
+    DiscoBall.style.top = "-100%"
+
     leftButton.style.visibility = "visible"
     rightButton.style.visibility = "visible"
     Exit.style.visibility = "hidden"
@@ -127,7 +133,7 @@ Exit.addEventListener('click', function(){
     images = [];
     current = 0;
     marsImage.src = ""
-    audio.currentTime = 52;
+    audio.currentTime = 54;
     audio.pause();
 })
 

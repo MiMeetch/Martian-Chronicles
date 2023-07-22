@@ -14,6 +14,9 @@ const ImageCarousel = document.getElementById('ImageCarousel')
 const marsImage = document.getElementById('mars-image')
 const roadsterData = document.getElementById('roadster-data')
 
+let audio = new Audio("../Sounds/Starman.mp3");
+audio.currentTime = 52;
+
 let images = []
 let current = 0
 
@@ -48,6 +51,8 @@ leftButton.addEventListener('click', function(){
     Starman.style.left = "0%"
 
     roadsterData.style.top = "35%"
+
+    audio.play()
 
 })
 
@@ -116,6 +121,7 @@ Exit.addEventListener('click', function(){
     images = [];
     current = 0;
     marsImage.src = ""
+    audio.currentTime = 52;
 })
 
 //Curiosity Button Press

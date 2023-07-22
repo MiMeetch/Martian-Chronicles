@@ -52,8 +52,14 @@ leftButton.addEventListener('click', function(){
 
     roadsterData.style.top = "35%"
 
-    // audio.play()
+})
 
+Starman.addEventListener('click', function() {
+    if (audio.paused) {
+        audio.play()
+    } else {
+        audio.pause()
+    }
 })
 
 //Surface Button Press

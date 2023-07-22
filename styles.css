@@ -86,10 +86,14 @@ body {
   left: 87.5%;
   transform: translate(-50%, -50%);
   /* background-color: lightcoral; */
-  width: 262px;
-  height: 232px;
+  width: 17.32804232804233vw;
+  height: 31.824417009602193vh;
   background-image: url(Images/Daco_5434584.png);
   filter: drop-shadow(16px 16px 16px black);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 #Rover2 {
@@ -98,10 +102,14 @@ body {
   left: 62.5%;
   transform: translate(-50%, -50%);
   /* background-color: lightblue; */
-  width: 444px;
-  height: 232px;
+  width: 29.365079365079364vw;
+  height: 31.824417009602193vh;
   background-image: url(Images/Daco_1663878.png);
   filter: drop-shadow(16px 16px 16px black);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 #Roadster {
@@ -109,11 +117,14 @@ body {
   top: 75%;
   left: 26.5%;
   transform: translate(-50%, -50%);
-  /* background-color: lightgreen; */
-  width: 535px;
-  height: 200px;
+  width: 35.383597883597886vw; /* Adjust the width to your preference */
+  height: 27.434842249657063vh; /* Adjust the height to your preference */
   background-image: url(Images/PngItem_1250144.png);
   filter: drop-shadow(16px 16px 16px black);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 #Title {
@@ -122,9 +133,13 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-image: url(images/Titleimgw.png);
-  width: 1200px;
-  height: 120px;
+  width: 79.36507936507937vw;
+  height: 16.46090534979424vh;
   filter: drop-shadow(6px 6px 8px black);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
 }
 
 #Exit {

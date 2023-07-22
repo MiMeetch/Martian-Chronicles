@@ -16,10 +16,10 @@ const marsImage = document.getElementById('mars-image')
 let images = []
 let current = 0
 
-Roadster.style.transition = "all 1s ease-out"
-Rover1.style.transition = "all 1s ease-out"
-Rover2.style.transition = "all 1s ease-out"
-Title.style.transition = "all 1s ease-out"
+Roadster.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out";
+Rover1.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
+Rover2.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
+Title.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
 Starman.style.transition = "all 3s ease-out"
 
 //Roadster Button Press

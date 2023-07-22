@@ -12,6 +12,7 @@ const backButton = document.getElementById('back-button')
 const nextButton = document.getElementById('next-button')
 const ImageCarousel = document.getElementById('ImageCarousel')
 const marsImage = document.getElementById('mars-image')
+const roadsterData = document.getElementById('roadster-data')
 
 let images = []
 let current = 0
@@ -22,7 +23,9 @@ Rover2.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-ou
 Title.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
 ImageCarousel.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
 marsImage.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
-Starman.style.transition = "all 3s ease-out"
+Starman.style.transition = "all 5s ease-out"
+roadsterData.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out";
+
 
 //Roadster Button Press
 leftButton.addEventListener('click', function(){
@@ -39,9 +42,12 @@ leftButton.addEventListener('click', function(){
     leftButton.style.visibility = "hidden"
     rightButton.style.visibility = "hidden"
     Exit.style.visibility = "visible"
+    roadsterData.style.visibility = "visible"
 
     Starman.style.top = "100%"
     Starman.style.left = "0%"
+
+    roadsterData.style.top = "35%"
 
 })
 
@@ -94,6 +100,8 @@ Exit.addEventListener('click', function(){
     marsImage.style.top = ""
     ImageCarousel.style.top = ""
 
+    roadsterData.style.top = ""
+
     leftButton.style.visibility = "visible"
     rightButton.style.visibility = "visible"
     Exit.style.visibility = "hidden"
@@ -103,6 +111,7 @@ Exit.addEventListener('click', function(){
     marsImage.style.visibility = "hidden"
     Rover1.style.visibility = "visible"
     Rover2.style.visibility = "visible"
+    roadsterData.style.visibility = ""
 
     images = [];
     current = 0;
@@ -166,3 +175,10 @@ nextButton.addEventListener("click", (e) => {
         marsImage.src = images[current]
     }
 })
+
+
+fetch("https://api.spacexdata.com/v4/roadster") 
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })

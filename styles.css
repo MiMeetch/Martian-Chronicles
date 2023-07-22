@@ -231,3 +231,18 @@ body {
   height: 15vh;
   font-weight: bolder;
 }
+
+#roadster-data {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 50vh;
+  width: 50vw;
+  background-color: gray;
+  border-radius: 20px;
+  opacity: 0.4;
+  border: 2px solid darkgray;
+  filter: drop-shadow(16px 16px 32px black);
+  visibility: hidden;
+}

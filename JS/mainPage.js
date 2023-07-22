@@ -142,7 +142,7 @@ Rover1Button.addEventListener('click', function() {
     Rover2.style.visibility = "hidden"
     Rover1Button.style.visibility = "hidden"
     Rover2Button.style.visibility = "hidden"
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2019-10-17&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -164,7 +164,7 @@ Rover2Button.addEventListener('click', function() {
     Rover2.style.visibility = "hidden"
     Rover1Button.style.visibility = "hidden"
     Rover2Button.style.visibility = "hidden"
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=10&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=2007-3-12&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
         .then(res => res.json())
         .then(data => {
             console.log(data)

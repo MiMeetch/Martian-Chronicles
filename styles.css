@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -254,4 +255,14 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1000;
+}
+
+@media screen and (max-width: 800px) {
+  #APOD-Title {
+    width: 80%;
+  }
+
+  #APOD-Explanation {
+    visibility: hidden;
+  }
 }

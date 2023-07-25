@@ -62,7 +62,7 @@ Starman.addEventListener('click', function() {
         audio.play()
     } else {
         audio.pause()
-        DiscoBall.style.top = "-50%"
+        DiscoBall.style.top = "-100%"
     }
 })
 

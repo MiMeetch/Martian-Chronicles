@@ -36,6 +36,10 @@ roadsterData.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s e
 DiscoBall.style.transition = "all 2s ease-out"
 
 
+Roadster.addEventListener('click', function(){
+    
+})
+
 //Roadster Button Press
 leftButton.addEventListener('click', function(){
 

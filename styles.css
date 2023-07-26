@@ -251,13 +251,16 @@ body {
   grid-template-columns: 1fr 1fr; /* Two columns with equal width */
   grid-template-rows: 1fr auto; /* One row for the content, one row for the button */
   grid-gap: 10px; /* You can adjust the gap between columns if needed */
+  padding: 10px;
 }
 
 /* Optional styling for the items */
 .grid-container > div {
   padding: 10px;
   text-align: center;
-  background-color: #f0f0f0;
+  background-color:rgba(128, 128, 128, 0.10);
+  border: solid 2px black;
+  border-radius: 20px;
 }
 
 .button-container {
@@ -276,7 +279,8 @@ body {
 
 .roadsterContent {
   text-align: center;
-  color: black;
+  color: white;
+  background-color:rgba(128,128,128);
 }
 
 #DiscoBall {

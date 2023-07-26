@@ -328,6 +328,8 @@ body {
 
   #ImageCarousel {
     align-items: end;
+    width: 90vw;
+    height: 88vh;
   }
   
   .navbutton {
@@ -335,5 +337,13 @@ body {
     height: 5vh;
     width: 20vw;
     font-weight: bolder;
+  }
+
+  #navigation-buttons {
+    width: 90vw;
+  }
+
+  #mars-image {
+    max-width: 90vw;
   }
 }

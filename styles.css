@@ -5,10 +5,6 @@ body {
   overflow: hidden;
 }
 
-.opac {
-  opacity: 1;
-}
-
 .background {
   background-position: center center;
   background-repeat: no-repeat;
@@ -206,7 +202,6 @@ body {
   align-items: center;
   visibility: hidden;
   border-radius: 20px;
-  filter: drop-shadow(16px 16px 32px black);
   opacity: 0.4;
   border: 2px solid darkgray;
 }
@@ -245,12 +240,10 @@ body {
   transform: translate(-50%, -50%);
   height: 50vh;
   width: 50vw;
-  background-color: gray;
   border-radius: 20px;
-  opacity: 0.4;
   border: 2px solid darkgray;
-  filter: drop-shadow(16px 16px 32px black);
   visibility: hidden;
+  background-color:rgba(128,128,128,.4)
 }
 
 .grid-container {

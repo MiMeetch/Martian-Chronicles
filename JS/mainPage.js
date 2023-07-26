@@ -198,7 +198,6 @@ Rover1Button.addEventListener('click', function() {
     fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2019-10-17&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             for(i = 0; i < data.photos.length; i++) {
                 images.push(data.photos[i].img_src);
             }
@@ -220,7 +219,6 @@ Rover2Button.addEventListener('click', function() {
     fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=2007-3-12&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             for(i = 0; i < data.photos.length; i++) {
                 images.push(data.photos[i].img_src);
             }
@@ -241,10 +239,3 @@ nextButton.addEventListener("click", (e) => {
         marsImage.src = images[current]
     }
 })
-
-
-fetch("https://api.spacexdata.com/v4/roadster") 
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-    })

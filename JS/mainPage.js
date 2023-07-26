@@ -13,6 +13,10 @@ const nextButton = document.getElementById('next-button')
 const ImageCarousel = document.getElementById('ImageCarousel')
 const marsImage = document.getElementById('mars-image')
 const roadsterData = document.getElementById('roadster-data')
+const earthDist = document.getElementById('item4')
+const roadsterSpeed = document.getElementById('item6')
+const marsDist = document.getElementById('item2')
+const roadsterDetails = document.getElementById('details')
 
 let audio = new Audio("../Sounds/Starman.mp3");
 audio.currentTime = 52;
@@ -55,17 +59,18 @@ leftButton.addEventListener('click', function(){
     fetch("https://api.spacexdata.com/v4/roadster") 
     .then(res => res.json())
     .then(data => {
-        console.log(data)
-        // const container = document.getElementById('grid-container')
-        // let gridHTML = '<div class="grid">'
-        // gridHTML += <div class="grid-item" id="key-col">
-        //     <ul>
-        //         <li></li>
-        //     </ul>
-        // </div>
-        console.log(data.name)
-    })
+        console.log(data.details)
+        roadsterDetails.textContent = data.details
 
+        const marsDistRounded = Math.floor(data.mars_distance_mi)
+        marsDist.textContent = marsDistRounded.toLocaleString() + " miles"
+
+        const earthDistRounded = Math.floor(data.earth_distance_mi)
+        earthDist.textContent = earthDistRounded.toLocaleString() + " miles"
+
+        const roadsterSpeedRounded = Math.floor(data.speed_mph)
+        roadsterSpeed.textContent = roadsterSpeedRounded.toLocaleString() + " mph"
+    })
 })
 
 Starman.addEventListener('click', function() {

@@ -4,6 +4,10 @@ body {
   overflow: hidden;
 }
 
+.opac {
+  opacity: 1;
+}
+
 .background {
   background-position: center center;
   background-repeat: no-repeat;
@@ -275,4 +279,10 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.roadsterContent {
+  text-align: center;
+  color: black;
+}
+
 

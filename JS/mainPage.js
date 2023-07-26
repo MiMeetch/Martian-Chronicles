@@ -62,7 +62,7 @@ Starman.addEventListener('click', function() {
         audio.play()
     } else {
         audio.pause()
-        DiscoBall.style.top = "-100%"
+        DiscoBall.style.top = "-200%"
     }
 })
 
@@ -71,23 +71,64 @@ rightButton.addEventListener('click', function(){
     Rover1Button.style.transition = "all 1s ease-out, visibility 0s ease-out"
     Rover2Button.style.transition = "all 1s ease-out, visibility 0s ease-out"
 
-    Roadster.style.left = "-50%"
+    // Roadster.style.left = "-50%"
 
-    Rover1.style.left = "75%"
+    // Rover1.style.left = "75%"
 
-    Rover2.style.left = "25%"
+    // Rover2.style.left = "25%"
 
-    Title.style.left = "-150%"
+    // Title.style.left = "-150%"
 
-    Rover1Button.style.left = "25%"
-    Rover1Button.style.visibility = "visible"
+    // Rover1Button.style.left = "25%"
+    // Rover1Button.style.visibility = "visible"
 
-    Rover2Button.style.left = "75%"
-    Rover2Button.style.visibility = "visible"
+    // Rover2Button.style.left = "75%"
+    // Rover2Button.style.visibility = "visible"
 
-    leftButton.style.visibility = "hidden"
-    rightButton.style.visibility = "hidden"
-    Exit.style.visibility = "visible"
+    // leftButton.style.visibility = "hidden"
+    // rightButton.style.visibility = "hidden"
+    // Exit.style.visibility = "visible"
+
+    if (window.innerWidth < 800) {
+        Roadster.style.left = "-50%"
+        Rover1.style.visibility = "visible"
+        Rover1.style.left = "50%"
+        Rover1.style.top = "65%"
+    
+        Rover2.style.left = "50%"
+    
+        Title.style.left = "-150%"
+    
+        Rover1Button.style.top = "40%"
+        Rover1Button.style.left = "50%"
+        Rover1Button.style.visibility = "visible"
+    
+        Rover2Button.style.top = "85%"
+        Rover2Button.style.left = "50%"
+        Rover2Button.style.visibility = "visible"
+    
+        leftButton.style.visibility = "hidden"
+        rightButton.style.visibility = "hidden"
+        Exit.style.visibility = "visible"
+    } else {
+        Roadster.style.left = "-50%"
+
+        Rover1.style.left = "75%"
+    
+        Rover2.style.left = "25%"
+    
+        Title.style.left = "-150%"
+    
+        Rover1Button.style.left = "25%"
+        Rover1Button.style.visibility = "visible"
+    
+        Rover2Button.style.left = "75%"
+        Rover2Button.style.visibility = "visible"
+    
+        leftButton.style.visibility = "hidden"
+        rightButton.style.visibility = "hidden"
+        Exit.style.visibility = "visible"
+    }
 
 })
 
@@ -117,7 +158,7 @@ Exit.addEventListener('click', function(){
 
     roadsterData.style.top = ""
 
-    DiscoBall.style.top = "-100%"
+    DiscoBall.style.top = "-200%"
 
     leftButton.style.visibility = "visible"
     rightButton.style.visibility = "visible"
@@ -126,7 +167,7 @@ Exit.addEventListener('click', function(){
     Rover2Button.style.visibility = "hidden"
     ImageCarousel.style.visibility = "hidden"
     marsImage.style.visibility = "hidden"
-    Rover1.style.visibility = "visible"
+    
     Rover2.style.visibility = "visible"
     roadsterData.style.visibility = ""
 
@@ -135,6 +176,12 @@ Exit.addEventListener('click', function(){
     marsImage.src = ""
     audio.currentTime = 54;
     audio.pause();
+
+    if (window.innerWidth < 800) {
+        Rover1.style.visibility = "hidden"
+    } else {
+        Rover1.style.visibility = "visible"
+    }
 })
 
 //Curiosity Button Press

@@ -17,9 +17,10 @@ const earthDist = document.getElementById('item4')
 const roadsterSpeed = document.getElementById('item6')
 const marsDist = document.getElementById('item2')
 const roadsterDetails = document.getElementById('details')
+const DiscoBall = document.getElementById('DiscoBall')
 
 let audio = new Audio("../Sounds/Starman.mp3");
-audio.currentTime = 52;
+audio.currentTime = 54;
 
 let images = []
 let current = 0
@@ -32,6 +33,7 @@ ImageCarousel.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s 
 marsImage.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out"
 Starman.style.transition = "all 5s ease-out"
 roadsterData.style.transition = "width 0s, height 0s, left 1s ease-out, top 1s ease-out";
+DiscoBall.style.transition = "all 2s ease-out"
 
 
 //Roadster Button Press
@@ -74,10 +76,12 @@ leftButton.addEventListener('click', function(){
 })
 
 Starman.addEventListener('click', function() {
+    DiscoBall.style.top = "0%"
     if (audio.paused) {
         audio.play()
     } else {
         audio.pause()
+        DiscoBall.style.top = "-200%"
     }
 })
 
@@ -86,23 +90,64 @@ rightButton.addEventListener('click', function(){
     Rover1Button.style.transition = "all 1s ease-out, visibility 0s ease-out"
     Rover2Button.style.transition = "all 1s ease-out, visibility 0s ease-out"
 
-    Roadster.style.left = "-50%"
+    // Roadster.style.left = "-50%"
 
-    Rover1.style.left = "75%"
+    // Rover1.style.left = "75%"
 
-    Rover2.style.left = "25%"
+    // Rover2.style.left = "25%"
 
-    Title.style.left = "-150%"
+    // Title.style.left = "-150%"
 
-    Rover1Button.style.left = "25%"
-    Rover1Button.style.visibility = "visible"
+    // Rover1Button.style.left = "25%"
+    // Rover1Button.style.visibility = "visible"
 
-    Rover2Button.style.left = "75%"
-    Rover2Button.style.visibility = "visible"
+    // Rover2Button.style.left = "75%"
+    // Rover2Button.style.visibility = "visible"
 
-    leftButton.style.visibility = "hidden"
-    rightButton.style.visibility = "hidden"
-    Exit.style.visibility = "visible"
+    // leftButton.style.visibility = "hidden"
+    // rightButton.style.visibility = "hidden"
+    // Exit.style.visibility = "visible"
+
+    if (window.innerWidth < 800) {
+        Roadster.style.left = "-50%"
+        Rover1.style.visibility = "visible"
+        Rover1.style.left = "50%"
+        Rover1.style.top = "65%"
+    
+        Rover2.style.left = "50%"
+    
+        Title.style.left = "-150%"
+    
+        Rover1Button.style.top = "40%"
+        Rover1Button.style.left = "50%"
+        Rover1Button.style.visibility = "visible"
+    
+        Rover2Button.style.top = "85%"
+        Rover2Button.style.left = "50%"
+        Rover2Button.style.visibility = "visible"
+    
+        leftButton.style.visibility = "hidden"
+        rightButton.style.visibility = "hidden"
+        Exit.style.visibility = "visible"
+    } else {
+        Roadster.style.left = "-50%"
+
+        Rover1.style.left = "75%"
+    
+        Rover2.style.left = "25%"
+    
+        Title.style.left = "-150%"
+    
+        Rover1Button.style.left = "25%"
+        Rover1Button.style.visibility = "visible"
+    
+        Rover2Button.style.left = "75%"
+        Rover2Button.style.visibility = "visible"
+    
+        leftButton.style.visibility = "hidden"
+        rightButton.style.visibility = "hidden"
+        Exit.style.visibility = "visible"
+    }
 
 })
 
@@ -132,6 +177,8 @@ Exit.addEventListener('click', function(){
 
     roadsterData.style.top = ""
 
+    DiscoBall.style.top = "-200%"
+
     leftButton.style.visibility = "visible"
     rightButton.style.visibility = "visible"
     Exit.style.visibility = "hidden"
@@ -139,15 +186,21 @@ Exit.addEventListener('click', function(){
     Rover2Button.style.visibility = "hidden"
     ImageCarousel.style.visibility = "hidden"
     marsImage.style.visibility = "hidden"
-    Rover1.style.visibility = "visible"
+    
     Rover2.style.visibility = "visible"
     roadsterData.style.visibility = ""
 
     images = [];
     current = 0;
     marsImage.src = ""
-    audio.currentTime = 52;
+    audio.currentTime = 54;
     audio.pause();
+
+    if (window.innerWidth < 800) {
+        Rover1.style.visibility = "hidden"
+    } else {
+        Rover1.style.visibility = "visible"
+    }
 })
 
 //Curiosity Button Press
@@ -161,10 +214,9 @@ Rover1Button.addEventListener('click', function() {
     Rover2.style.visibility = "hidden"
     Rover1Button.style.visibility = "hidden"
     Rover2Button.style.visibility = "hidden"
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2019-10-17&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             for(i = 0; i < data.photos.length; i++) {
                 images.push(data.photos[i].img_src);
             }
@@ -183,10 +235,9 @@ Rover2Button.addEventListener('click', function() {
     Rover2.style.visibility = "hidden"
     Rover1Button.style.visibility = "hidden"
     Rover2Button.style.visibility = "hidden"
-    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?sol=10&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
+    fetch('https://api.nasa.gov/mars-photos/api/v1/rovers/spirit/photos?earth_date=2007-3-12&api_key=Ebu12BEIOtx4Dz9PPjuHwb6IrwUchNylWAqw9pYS')
         .then(res => res.json())
         .then(data => {
-            console.log(data)
             for(i = 0; i < data.photos.length; i++) {
                 images.push(data.photos[i].img_src);
             }
@@ -207,6 +258,3 @@ nextButton.addEventListener("click", (e) => {
         marsImage.src = images[current]
     }
 })
-
-
-

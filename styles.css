@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -89,7 +90,6 @@ body {
   top: 75%;
   left: 87.5%;
   transform: translate(-50%, -50%);
-  /* background-color: lightcoral; */
   width: 17.32804232804233vw;
   height: 31.824417009602193vh;
   background-image: url(Images/Daco_5434584.png);
@@ -105,7 +105,6 @@ body {
   top: 75%;
   left: 62.5%;
   transform: translate(-50%, -50%);
-  /* background-color: lightblue; */
   width: 29.365079365079364vw;
   height: 31.824417009602193vh;
   background-image: url(Images/Daco_1663878.png);
@@ -121,8 +120,8 @@ body {
   top: 75%;
   left: 26.5%;
   transform: translate(-50%, -50%);
-  width: 35.383597883597886vw; /* Adjust the width to your preference */
-  height: 27.434842249657063vh; /* Adjust the height to your preference */
+  width: 35.383597883597886vw;
+  height: 27.434842249657063vh;
   background-image: url(Images/PngItem_1250144.png);
   filter: drop-shadow(16px 16px 16px black);
   background-position: center center;
@@ -191,6 +190,8 @@ body {
   width: 147px;
   height: 161px;
   cursor: pointer;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 #ImageCarousel {
@@ -285,4 +286,101 @@ body {
   color: black;
 }
 
+#DiscoBall {
+  position: fixed;
+  top: -200%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 1000;
+}
 
+@media screen and (max-width: 800px) {
+  #APOD-Title {
+    width: 80%;
+  }
+
+  #APOD-Explanation {
+    visibility: hidden;
+  }
+
+  #Rover1 {
+    visibility: hidden;
+    width: 70vw;
+    left: 200%;
+  }
+  
+  #Rover2 {
+    left: 50%;
+    top: 25%;
+    width: 80vw;
+  }
+  
+  #Roadster {
+    position: fixed;
+    top: 75%;
+    left: 50%;
+    width: 80vw;
+  }
+
+  #Title {
+    top: 8%;
+  }
+
+  #leftPanel {
+    width: 50%;
+    height: 50vh;
+    align-items: start;
+    padding: 10px;
+  }
+  
+  #rightPanel {
+    width: 50%;
+    height: 50vh;
+    align-items: end;
+    padding: 10px;
+  }
+  
+  #button-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  #roadster-data {
+    height: 55vh;
+    width: 90vw;
+  }
+
+  #Starman {
+    width: 13vh;
+    height: 13vh;
+  }
+
+  #rover1Button{
+    z-index: 1000;
+  }
+  
+  #rover2Button{
+    z-index: 1000;
+  }
+
+  #ImageCarousel {
+    align-items: end;
+    width: 90vw;
+    height: 88vh;
+  }
+  
+  .navbutton {
+    margin: 10px;
+    height: 5vh;
+    width: 20vw;
+    font-weight: bolder;
+  }
+
+  #navigation-buttons {
+    width: 90vw;
+  }
+
+  #mars-image {
+    max-width: 90vw;
+  }
+}

@@ -3,7 +3,6 @@ window.addEventListener('DOMContentLoaded', function() {
     .then((resp) => resp.json())
     .then(function(data) {
         
-        console.log(data);
 
         const backgroundElement = document.getElementById('background');
         const backgroundTitle = document.getElementById('APOD-Title');

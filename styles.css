@@ -131,7 +131,7 @@ body {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-image: url(images/Titleimgw.png);
+  background-image: url(Images/Titleimgw.png);
   width: 79.36507936507937vw;
   height: 16.46090534979424vh;
   filter: drop-shadow(6px 6px 8px black);
@@ -182,7 +182,7 @@ body {
   top: 130%;
   left: -30%;
   transform: translate(0%, -100%);
-  background-image: url(images/fullsuitenew-0.png);
+  background-image: url(Images/fullsuitenew-0.png);
   width: 147px;
   height: 161px;
   cursor: pointer;

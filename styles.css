@@ -240,10 +240,10 @@ body {
   transform: translate(-50%, -50%);
   height: 50vh;
   width: 50vw;
-  border-radius: 20px;
-  border: 2px solid darkgray;
+  /* border-radius: 20px; */
+  /* border: 2px solid darkgray; */
   visibility: hidden;
-  background-color:rgba(128,128,128,.4)
+  /* background-color:rgba(128,128,128,.4) */
 }
 
 .grid-container {
@@ -259,7 +259,7 @@ body {
   padding: 10px;
   text-align: center;
   background-color:rgba(128, 128, 128, 0.10);
-  border: solid 2px black;
+  border: solid 2px gray;
   border-radius: 20px;
 }
 
@@ -280,7 +280,7 @@ body {
 .roadsterContent {
   text-align: center;
   color: white;
-  background-color:rgba(128,128,128);
+  /* background-color:rgba(128,128,128); */
 }
 
 #DiscoBall {
@@ -289,6 +289,45 @@ body {
   left: 50%;
   transform: translate(-50%, 0);
   z-index: 1000;
+}
+
+.roadsterContainer {
+  background-color: rgba(128, 128, 128, 0.4);
+  border-radius: 20px;
+  border: 2px solid gray
+}
+
+#item1 {
+  background-color: rgb(119, 136, 153, 0.4);
+}
+
+#item2 {
+  background-color: rgb(119, 136, 153, 0.4);
+}
+
+#item3 {
+  background-color: rgb(119, 136, 153, 0.4);
+}
+
+#item4 {
+  background-color: rgb(119, 136, 153, 0.4);
+}
+
+#item5 {
+  background-color: rgb(119, 136, 153, 0.4);
+}
+
+#item6 {
+  background-color: rgb(119, 136, 153, 0.4);
+}
+
+#details {
+  padding: 10px;
+}
+
+#roadster-header {
+  font-weight: bold;
+  padding-top: 5px;
 }
 
 @media screen and (max-width: 800px) {
@@ -381,3 +420,4 @@ body {
     max-width: 90vw;
   }
 }
+
